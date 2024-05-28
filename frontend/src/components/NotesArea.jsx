@@ -21,7 +21,7 @@ function NotesArea(props) {
   }
 
   function submitNote(event) {
-    axios.post('http://localhost:5000/api/notes', note)
+    axios.post('https://notes-takings-3.onrender.com/api/notes', note)
       .then(response => {
         props.onAdd(response.data);
         setNote({

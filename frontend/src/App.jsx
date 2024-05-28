@@ -32,7 +32,7 @@ function App() {
   }
 
   function deleteNote(id) {
-    axios.delete(`https://notes-takings-3.onrender.com/${id}`)
+    axios.delete(`https://notes-takings-3.onrender.com/api/notes/${id}`)
       .then(response => {
         console.log('Delete response:', response.data);
         setNotes(prevNotes => prevNotes.filter(noteItem => noteItem._id !== id));
