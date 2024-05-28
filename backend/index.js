@@ -6,7 +6,7 @@ const cors = require('cors'); // Import cors
 const noteRoutes = require('./routes/notes'); // Import routes
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 
 // Connect to MongoDB
@@ -22,7 +22,9 @@ db.once('open', () => {
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https"]
+}));
 app.use(express.json()); 
 
 // Routes
