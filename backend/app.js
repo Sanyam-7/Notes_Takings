@@ -22,9 +22,8 @@ db.once('open', () => {
 });
 
 // Middleware
-app.use(cors({
-  origin: ["https"]
-}));
+app.use(cors());
+
 app.use(express.json()); 
 
 // Routes

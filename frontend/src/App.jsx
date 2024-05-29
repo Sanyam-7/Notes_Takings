@@ -6,14 +6,13 @@ import NotesArea from "./components/NotesArea";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const [editingNoteId, setEditingNoteId] = useState(null); // Track the note being edited
+  const [editingNoteId, setEditingNoteId] = useState(null); 
   const [editFormData, setEditFormData] = useState({
     title: "",
     content: ""
   });
 
   useEffect(() => {
-    // Fetch notes from backend on component mount
     fetchNotes();
   }, []);
 
