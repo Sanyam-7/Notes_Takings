@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   function fetchNotes() {
-    axios.get('https://notes-takings-3.onrender.com/api/notes')
+    axios.get('https://notes-takings-4.onrender.com/api/notes')
       .then(response => {
         setNotes(response.data);
       })
@@ -31,7 +31,7 @@ function App() {
   }
 
   function deleteNote(id) {
-    axios.delete(`https://notes-takings-3.onrender.com/api/notes/${id}`)
+    axios.delete(`https://notes-takings-4.onrender.com/api/notes/${id}`)
       .then(response => {
         console.log('Delete response:', response.data);
         setNotes(prevNotes => prevNotes.filter(noteItem => noteItem._id !== id));
@@ -60,7 +60,7 @@ function App() {
 
   function handleEditSubmit(event) {
     event.preventDefault();
-    axios.put(`https://notes-takings-3.onrender.com/api/notes/${editingNoteId}`, {
+    axios.put(`https://notes-takings-4.onrender.com/api/notes/${editingNoteId}`, {
       title: editFormData.title,
       content: editFormData.content
     })
